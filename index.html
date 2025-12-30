@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اخوات لورد | Ultimate Cyber Mode 2026</title>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif;}
+body{color:#fff;overflow-x:hidden;background:#050b14;transition:background 2s linear;position:relative;}
+
+/* Canvas ماتركس */
+#matrixCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;background:transparent;}
+
+/* الهيرو */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px;position:relative;z-index:1;}
+.top-title{margin-top:20px;font-size:clamp(18px,3vw,26px);color:#7df9ff;letter-spacing:3px;text-shadow:0 0 12px #00eaff,0 0 28px #00eaff;}
+.hero h1{margin-top:8px;font-size:clamp(26px,4.5vw,44px);color:#00eaff;text-shadow:0 0 22px rgba(0,234,255,.75);}
+.hero p{margin-top:6px;opacity:.85;font-size:clamp(14px,2.5vw,18px);}
+
+/* ===== العداد ===== */
+.countdown{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.time-box{min-width:90px;background:rgba(255,255,255,0.08);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:14px 12px;box-shadow:0 0 25px #00eaff;transition:0.2s;}
+.time-box span{display:block;font-size:28px;font-weight:700;color:#00eaff;text-shadow:0 0 12px #00eaff;}
+.time-box small{font-size:12px;opacity:.8;}
+
+/* ===== الكروت ===== */
+.names{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;width:100%;max-width:1200px;margin-top:36px;}
+.card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  border-radius:20px;
+  padding:22px;
+  border:1px solid rgba(255,255,255,0.15);
+  transition:.4s;
+  cursor:pointer;
+  animation:shake-pulse 3s infinite;
+  box-shadow:0 0 12px #00eaff,0 0 28px #00eaff inset;
+}
+.card p{font-size:14px;line-height:1.8;opacity:.95;transition:.3s;}
+
+/* اهتزاز + Pulse مستمر للكروت */
+@keyframes shake-pulse{
+  0%{transform:translateX(0) scale(1) rotate(0deg);}
+  20%{transform:translateX(-2px) scale(1.02) rotate(-1deg);}
+  40%{transform:translateX(2px) scale(1.03) rotate(1deg);}
+  60%{transform:translateX(-2px) scale(1.02) rotate(-1deg);}
+  80%{transform:translateX(2px) scale(1.01) rotate(1deg);}
+  100%{transform:translateX(0) scale(1) rotate(0deg);}
+}
+
+footer{margin:40px 0 10px;font-size:13px;opacity:.6;}
+#particles-js{position:fixed;inset:0;z-index:-1;}
+</style>
+</head>
+
+<body>
+
+<audio id="cyberAudio" loop autoplay>
+  <source src="https://cdn.pixabay.com/download/audio/2022/09/10/audio_1a99764602.mp3?filename=cyberpunk-ambient-114023.mp3" type="audio/mpeg">
+</audio>
+
+<canvas id="matrixCanvas"></canvas>
+<div id="particles-js"></div>
+
+<section class="hero">
+
+  <div class="top-title">اخوات زياد عماد (لورد👑)</div>
+  <h1 id="mainTitle"> 💘اخواتي اللي داخلين معايا 2026💘</h1>
+  <p>تدوم****لحضن زيزوو🧸🫶🏻🌏🌏🧸</p>
+
+  <!-- العداد -->
+  <div class="countdown" id="countdown">
+    <div class="time-box"><span id="days">--</span><small>يوم</small></div>
+    <div class="time-box"><span id="hours">--</span><small>ساعة</small></div>
+    <div class="time-box"><span id="minutes">--</span><small>دقيقة</small></div>
+    <div class="time-box"><span id="seconds">--</span><small>ثانية</small></div>
+  </div>
+
+  <div class="names">
+    <div class="card"><p>آخًِـويآ وعم ع ـيآلي(آلڪل ف آلڪلل)♥. آحٍَـمد ع ـبد آلنآصࢪ ﭕꪅحٍَـوؤڪشهه. ⤹</p></div>
+    <div class="card"><p>آخًِـوويآ وحٍَـتتهه مني. عمࢪو آحٍَـمد. ꒱آلڪنجٍَـجٍَ꒰♡ِ</p></div>
+    <div class="card"><p>آخِوٌوٌيَآآ وٌحًبًيَبًيَيَ. يَوٌسِفُ آحًمًدٍ. ꧁𝐵𝑂𝑌𝐾𝐴꧂</p></div>
+    <div class="card"><p>آخِوٌوٌيَآآ وٌآکْتٌر مًنِ آخِ. آبًوٌ بًکْرر (جَّــᵘ ̶͢͞͟ــوٌٰڪٰـ𖣘꯭𝓵𝓴ـࢪ آެݪفَُـ۝ᬼـࢪعٌـɪᆕ࿆ᷟـنِِهُّ عٌــــآدٍُيَٰ جَّــــــدٍُآ𓈒ﹾ٭)</p></div>
+    <div class="card"><p>آخِوٌوٌيَآآ آلَ لَيَآآآ. آبًرآهّيَمً. (آلَجّوٌوٌکْر!🔐)</p></div>
+    <div class="card"><p>آخِوٌوٌيَآآ وٌقُلَبًيَيَيَ. سِــيَــفُ. (❏ِآلَآمًريَکْيَيَ❏ِ)</p></div>
+    <div class="card"><p>آخِوٌويَآآآ آخِ لَيَآآآ. زٍيَآدٍ آحًمًدٍ. (آلَدٍيَلَلَر♕)</p></div>
+    <div class="card"><p>آخًِـوويآآ. وآخًِ ليآآآ. آحٍَـمد آبࢪآههيم (𓇡م࣬وٰꫂكـﹻ۬ـشٰـﹻ۬ــﹻۧۦۦـۿ𓇡)</p></div>
+  </div>
+
+  <footer>يدوم زيزو ل حضن (****)📎💘🫂🫂</footer>
+</section>
+
+<script>
+/* ===== Matrix Rain Background ===== */
+const canvas=document.getElementById('matrixCanvas');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+const letters='lordbosalordhaesgerara1234678910';
+const fontSize=16;
+const columns=canvas.width/fontSize;
+const drops=new Array(Math.floor(columns)).fill(1);
+
+function drawMatrix(){
+  ctx.fillStyle='rgba(0,0,0,0.05)';
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle='#0F0';
+  ctx.font=fontSize+'px monospace';
+  for(let i=0;i<drops.length;i++){
+    const text=letters.charAt(Math.floor(Math.random()*letters.length));
+    ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+    drops[i]++;
+    if(drops[i]*fontSize>canvas.height && Math.random()>0.975)drops[i]=0;
+  }
+  requestAnimationFrame(drawMatrix);
+}
+drawMatrix();
+
+/* ===== صوت النبض ===== */
+const beep=new Audio('https://youtu.be/nc51GKLUXw0?si=A3buzJ1Cw8Uh6l7E');
+beep.volume=0.8;
+
+/* ===== العداد ===== */
+const targetDate=new Date("2026-01-01T00:00:00").getTime();
+setInterval(()=>{
+  const now=new Date().getTime();
+  const diff=targetDate-now;
+  if(diff<=0) return;
+  const days=Math.floor(diff/(1000*60*60*24));
+  const hours=Math.floor((diff/(1000*60*60))%24);
+  const minutes=Math.floor((diff/(1000*60))%60);
+  const seconds=Math.floor((diff/1000)%60);
+  document.getElementById("days").textContent=days;
+  document.getElementById("hours").textContent=hours;
+  document.getElementById("minutes").textContent=minutes;
+  document.getElementById("seconds").textContent=seconds;
+  beep.currentTime=0; beep.play().catch(e=>{});
+  document.querySelectorAll('.time-box').forEach(b=>{b.style.transform='scale(1.15)'; setTimeout(()=>{b.style.transform='scale(1)';},150);});
+},1000);
+
+/* ===== particles Lord Mode ===== */
+const isMobile=window.innerWidth<768;
+particlesJS("particles-js",{
+  "particles":{
+    "number":{"value":isMobile?55:100,"density":{"enable":true,"value_area":900}},
+    "color":{"value":"#00eaff"},
+    "shape":{"type":"circle"},
+    "opacity":{"value":0.65,"random":true,"anim":{"enable":true,"speed":1.5,"opacity_min":0.3}},
+    "size":{"value":3.2,"random":true,"anim":{"enable":true,"speed":3,"size_min":1.2}},
+    "line_linked":{"enable":true,"distance":135,"color":"#00eaff","opacity":0.55,"width":1.3},
+    "move":{"enable":true,"speed":isMobile?1.6:3.2,"random":true,"out_mode":"out","attract":{"enable":true,"rotateX":900,"rotateY":900}}
+  },
+  "interactivity":{"events":{"onhover":{"enable":!isMobile,"mode":["grab","repulse"]},"onclick":{"enable":true,"mode":"push"}},"modes":{"grab":{"distance":200,"line_linked":{"opacity":0.9}},"repulse":{"distance":160,"duration":0.4},"push":{"particles_nb":6}}},
+  "retina_detect":true
+});
+
+/* ===== Neon Colors Pulse مع الموسيقى ===== */
+const cards=document.querySelectorAll('.card');
+const mainTitle=document.getElementById('mainTitle');
+const colors=['#00eaff','#ff00ff','#00ff99','#ff5500','#ffaa00'];
+
+function pulseNeon(){
+  const color=colors[Math.floor(Math.random()*colors.length)];
+  cards.forEach(c=>{c.style.boxShadow=`0 0 20px ${color},0 0 40px ${color} inset`;});
+  mainTitle.style.textShadow=`0 0 30px ${color},0 0 60px ${color}`;
+}
+setInterval(pulseNeon,400); // كل 0.4 ثانية يتغير Neon
+</script>
+
+</body>
+</html>
